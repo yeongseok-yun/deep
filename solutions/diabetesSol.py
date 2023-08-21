@@ -52,16 +52,29 @@ b = 1.0
 #b_new = b_new + 1 * err
 #print(w_new,b_new)
 
-for x_i,y_i in zip(x,y):
-    y_hat = x_i * w + b
-    err = y_i - y_hat
-    w_rate = x_i
-    w = w + w_rate * err
-    b = b + 1 * err
+##에포크 반복
+for i in range(1, 100):
+    for x_i,y_i in zip(x,y):
+        y_hat = x_i * w + b
+        err = y_i - y_hat
+        w_rate = x_i
+        w = w + w_rate * err
+        b = b + 1 * err
 print(w,b)
 
 plt.scatter(x,y)
 pt1 = (-0.1,-0.1 * w + b)
 pt2 = (0.15,0.15 * w + b)
 plt.plot([pt1[0],pt2[0]],[pt1[1],pt2[1]])
+
+x_new = 0.18
+y_pred = x_new * w + b
+plt.scatter(x_new,y_pred)
+
+x_new = 0.15
+y_pred = x_new * w + b
+plt.scatter(x_new,y_pred)
+
 plt.show()
+
+
