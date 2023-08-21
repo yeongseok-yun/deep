@@ -16,7 +16,7 @@ plt.show()
 
 
 #넘파이 배열로 산점도 그리기
-x = np.random.randn(1000)
-y = np.random.randn(1000)
+x = np.random.randn(500)
+y = np.random.randn(500)
 plt.scatter(x,y)
 plt.show()
