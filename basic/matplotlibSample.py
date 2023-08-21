@@ -20,3 +20,5 @@ x = np.random.randn(500)
 y = np.random.randn(500)
 plt.scatter(x,y)
 plt.show()
+
+
