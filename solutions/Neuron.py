@@ -18,6 +18,6 @@ class Neuron:
                 y_hat = self.forpass(x_i)                   #정방향 계산
                 err = -(y_i - y_hat)                        #오차 계산
                 w_grad, b_grad = self.backprop(x_i, err)    #역방향계산
-                self.w -= w_grad                            #가중치업데이트
-                self.b -= b_grad                            #절편업데이트
+                self.w -= w_grad                            #가중치업데이트수행
+                self.b -= b_grad                            #절편업데이트수행
         print(self.w,self.b)
